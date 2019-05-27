@@ -1,0 +1,41 @@
+<resources>
+
+    <string name="SystemMarket">Ingreso</string>
+    <string name="sysMarket_login">Registro</string>
+    <string name="activity_registro">Registro</string>
+    <string name="tv_system_market">System-Market</string>
+    <string name="et_lg_ingrese_usuario">Ingrese usuario</string>
+    <string name="et_lg_ingrese_password">Ingrese Contraseña</string>
+    <string name="btn_lg_salir">Salir</string>
+    <string name="btn_lg_ingresar">Ingresar</string>
+    <string name="btn_lg_registrate">Registrate</string>
+    <string name="tv_lg_recuperar">¿Olvistaste tu contraseña?. Click aqui</string>
+    <string name="btn_lg_olvido_contra">¿Olvido su contraseña? Click aqui</string>
+    <string name="et_rg_ingrese_nuevo_usuario">Ingrese nuevo usuario</string>
+    <string name="et_rg_ingrese_su_nombre">Ingrese su nombre</string>
+    <string name="et_rg_ingrese_su_apellido">Ingrese su apellido</string>
+    <string name="et_rg_new_pass">Ingrese su nueva contraseña</string>
+    <string name="et_rg_repita_contrase_a">Repita contraseña</string>
+    <string name="et_rg_correo_electronico">Correo electronico</string>
+    <string name="btn_rg_registrar">Registrar</string>
+    <string name="et_rg_cancelar">Cancelar</string>
+    <string name="et_rg_nacimiento">Ingrese su fecha de nacimiento</string>
+    <string name="tv_cc_producto">Ingrese codigo de producto</string>
+    <string name="btn_cc_compara">Comparar</string>
+    <string name="tv_cc_txt_total">Total:</string>
+    <string name="lv_prod_nombre">El producto</string>
+    <string name="lv_prod_cat">Categoria:</string>
+    <string name="lv_prod_precio">Precio:</string>
+    <string name="lv_prod_subtotal">Subtotal:</string>
+    <string name="tv_lv_nom_prod">Nombre de producto</string>
+    <string name="tv_cat">Categoria:</string>
+    <string name="tv_lv_categoria">Categoria</string>
+    <string name="lv_precio">Precio:</string>
+    <string name="tv_precio">Valor</string>
+    <string name="tv_cantidad">Cantidad:</string>
+    <string name="tv_lv_cantidad">Cantidad</string>
+    <string name="tv_subtotal">Subtotal:</string>
+    <string name="tv_lv_subtotal">Subtotal</string>
+    <string name="tv_cc_total">$1.990</string>
+    <string name="btn_cc_vovler">Salir</string>
+</resources>

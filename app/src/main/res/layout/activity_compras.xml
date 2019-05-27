@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_compra"
+    tools:context=".vista.ComprasActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ListView
+        android:id="@+id/lv_cc_carro"
+        android:layout_width="396dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_cc_producto" />
+
+    <Button
+        android:id="@+id/btn_cc_compara"
+        android:layout_width="338dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="41dp"
+        android:background="@drawable/btn_style"
+        android:text="@string/btn_cc_compara"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cc_txt_total" />
+
+    <TextView
+        android:id="@+id/tv_cc_txt_total"
+        android:layout_width="108dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:text="@string/tv_cc_txt_total"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_cc_total"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cc_total"
+        android:layout_width="195dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/tv_cc_total"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_cc_txt_total"
+        app:layout_constraintTop_toBottomOf="@+id/lv_cc_carro" />
+
+    <Button
+        android:id="@+id/btn_cc_volver"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_style"
+        android:text="@string/btn_cc_vovler"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cc_compara" />
+
+    <EditText
+        android:id="@+id/et_cc_producto"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="338dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:hint="@string/tv_cc_producto"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_btn_scan"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/btn_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cc_volver"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cc_compara"
+        app:srcCompat="@drawable/ic_scan_3" />
+
+</android.support.constraint.ConstraintLayout>
