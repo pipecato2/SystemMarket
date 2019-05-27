@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     String titulo = "Ingreso";
 
-   String aaa="sdfsdf";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
