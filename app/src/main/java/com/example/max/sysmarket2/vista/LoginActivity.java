@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_lg_registar_A;
     Button btn_lg_salir_A;
 
-    String titulo = "Ingreso";
+    String titulo = "Bienvenido";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,50 +66,20 @@ public class LoginActivity extends AppCompatActivity {
         btn_lg_registar_A = (Button) findViewById(R.id.btn_lg_registar);
         btn_lg_salir_A = (Button) findViewById(R.id.btn_lg_salir);
 
-
+        /**
+         * Ingresar al sistema
+         *
+         * Llama el procedimiento getUsuario ´´para validar usuario
+         * @author Felipe Morales
+         * @version 2019.05.28
+         * @since 1.0
+         * Method that adds two integers togethe
+         */
         btn_lg_ingresar_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String error;
-
-                /**
-                 * Declacarion de variables
-                 */
-
-
-           //     if (Validadores.valida_existencia(usu) == null){
-
-             //       Intent i = new Intent(LoginActivity.this, ComprasActivity.class);
-               //     startActivity(i);
-
-               // }else {
-
-                 //   error = Validadores.valida_existencia(usu);
-                 //   Toast.makeText(getApplicationContext(), error,Toast.LENGTH_SHORT).show();
-               // }
                     getUsuario(v.getContext(),et_lg_usuario_A.getText().toString(),et_lg_password_A.getText().toString());
-
-
-
-         /*
-                error = Validadores.validaTexto(et_lg_usuario_A);
-
-                if (error != null) {
-                    et_lg_usuario_A.setError(error);
-
-                } else {
-                    error = Validadores.valida_pass((et_lg_password_A));
-                    if (error != null) {
-                        et_lg_password_A.setError(error);
-                    }else {
-                        if (error != null){
-
-
-                        }
-                    }
-                } */
-
             }
         });
 
@@ -124,6 +94,20 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * getUsuario
+     *
+     * Verifica si el usuario existe, sino existe manda un mensaje y la otra validación  si esta activo
+     *getUsuario (inal Context contex, String usuario, String Clave)
+     * @author Felipe Morales
+     * @version 2019.05.28
+     * @since 1.0
+     * Method that adds two integers together
+     *
+     * @param usuario The first integer to add
+     * @param Clave The second integer to add
+
+     */
     public static void getUsuario(final Context contex, String usuario, String Clave){
 
         String PLACES_URL = "http://fmorales-001-site2.btempurl.com/api/Usuario/"+usuario+"/"+Clave+"/ValidacionUsuario";
