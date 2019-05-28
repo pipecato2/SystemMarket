@@ -38,4 +38,6 @@
     <string name="tv_lv_subtotal">Subtotal</string>
     <string name="tv_cc_total">$1.990</string>
     <string name="btn_cc_vovler">Salir</string>
+    <string name="msjContresanaIncorrecta">El usuario o contraseña no corresponde</string>
+    <string name="msjcuentaInactiva">El usuario se encuentra su cuenta desahabilitada.</string>
 </resources>
