@@ -42,8 +42,8 @@ public class LoginActivity extends AppCompatActivity {
      * @param btn_lg_registrar_A El parametro de tipo Button referencia el boton "Registrar" el cual iniciara el Activity "RegistroActivity"
      * @param btn_lg_salir_A El parametro de tipo Button referencia el boton "Salir" el cual cerrara la aplicacion.
      */
-    EditText et_lg_usuario_A;
-    EditText et_lg_password_A;
+    static EditText et_lg_usuario_A;
+    static EditText et_lg_password_A;
     Button btn_lg_ingresar_A;
     Button btn_lg_registar_A;
     Button btn_lg_salir_A;
@@ -71,11 +71,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
-
-                UsuarioVO usu = new UsuarioVO();
-
-                
                 String error;
 
                 /**
@@ -93,7 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                  //   error = Validadores.valida_existencia(usu);
                  //   Toast.makeText(getApplicationContext(), error,Toast.LENGTH_SHORT).show();
                // }
-                    getSede(v.getContext(),et_lg_usuario_A.getText().toString(),et_lg_password_A.getText().toString());
+                    getUsuario(v.getContext(),et_lg_usuario_A.getText().toString(),et_lg_password_A.getText().toString());
 
 
 
@@ -129,9 +124,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    public static void getSede(Context contex, String usuario, String Clave){
+    public static void getUsuario(final Context contex, String usuario, String Clave){
 
-        String PLACES_URL = "http://fmorales-001-site2.btempurl.com/api/Usuario/Admin/12345678/ValidacionUsuario";
+        String PLACES_URL = "http://fmorales-001-site2.btempurl.com/api/Usuario/"+usuario+"/"+Clave+"/ValidacionUsuario";
         final String LOG_TAG = "VolleyPlacesRemoteDS";
 
 // Instantiate the RequestQueue
@@ -146,22 +141,34 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onResponse(JSONArray responsePlaces) {
-                        for (int i=0; i<responsePlaces.length();i++){
-                            try {
-                                //lstSede.add(new Sede(responsePlaces.getJSONObject(i).getInt("sede_id"),
-                                //        responsePlaces.getJSONObject(i).getString("sede_direccion"),
-                                //       responsePlaces.getJSONObject(i).getInt("sede_estado")));
-                                Log.e("tag_usuario",responsePlaces.getJSONObject(i).getString("usuario1"));
-                                Log.e("tag_rut",responsePlaces.getJSONObject(i).getString("Rut1"));
-                                Log.e("tag_nombre",responsePlaces.getJSONObject(i).getString("Nombre1"));
-                                Log.e("tag_IdPerfil",responsePlaces.getJSONObject(i).getString("IdPerfil"));
-                                Log.e("tag_Fecha_Nac1",responsePlaces.getJSONObject(i).getString("Fecha_Nac1"));
-                                Log.e("tag_Email1",responsePlaces.getJSONObject(i).getString("Email1"));
-                                Log.e("tag_Clave1",responsePlaces.getJSONObject(i).getString("Clave1"));
-                                Log.e("tag_Apellido1",responsePlaces.getJSONObject(i).getString("Apellido1"));
-                                Log.e("tag_Activo",responsePlaces.getJSONObject(i).getString("Activo"));
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                        UsuarioVO usu = new UsuarioVO();
+                        if (responsePlaces.length() == 0) {
+                            et_lg_password_A.setText("");
+                            et_lg_usuario_A.clearFocus();
+                            Toast.makeText(contex,contex.getString(R.string.msjContresanaIncorrecta), Toast.LENGTH_LONG).show();
+                        } else {
+                            for (int i = 0; i < responsePlaces.length(); i++) {
+                                try {
+                                    usu.setNomUser(responsePlaces.getJSONObject(i).getString("usuario1"));
+                                    usu.setApellido(responsePlaces.getJSONObject(i).getString("Apellido1"));
+
+                                    usu.setApellido(responsePlaces.getJSONObject(i).getString("Rut1"));
+                                    usu.setNombre(responsePlaces.getJSONObject(i).getString("Nombre1"));
+                                    usu.setIdPerfil(responsePlaces.getJSONObject(i).getInt("IdPerfil"));
+                                    usu.setFecha_Nac(responsePlaces.getJSONObject(i).getString("Fecha_Nac1"));
+                                    usu.setEmail(responsePlaces.getJSONObject(i).getString("Email1"));
+                                    usu.setContraseña(responsePlaces.getJSONObject(i).getString("Clave1"));
+                                    usu.setEstado(responsePlaces.getJSONObject(i).getInt("Activo")) ;
+
+                                    if(usu.getEstado()==0){
+                                        et_lg_password_A.setText("");
+                                        et_lg_usuario_A.clearFocus();
+                                        Toast.makeText(contex,contex.getString(R.string.msjcuentaInactiva), Toast.LENGTH_LONG).show();
+                                    }
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
                             }
                         }
                         Log.d(LOG_TAG,responsePlaces.toString());
