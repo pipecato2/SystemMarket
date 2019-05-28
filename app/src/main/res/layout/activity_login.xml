@@ -15,6 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/btn_style"
         android:lineSpacingExtra="17sp"
         android:text="@string/btn_lg_salir"
@@ -22,16 +23,18 @@
         android:textColor="@android:color/background_light"
         android:textSize="17sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_lg_registar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_lg_registar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_lg_ingresar"
         android:layout_width="137dp"
         android:layout_height="53dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/btn_style"
         android:text="@string/btn_lg_ingresar"
         android:textColor="@android:color/background_light"
@@ -44,13 +47,16 @@
         android:id="@+id/btn_lg_registar"
         android:layout_width="137dp"
         android:layout_height="53dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/btn_style"
         android:text="@string/btn_lg_registrate"
         android:textColor="@android:color/background_light"
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_lg_ingresar"
+        app:layout_constraintEnd_toStartOf="@+id/btn_lg_ingresar"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -89,14 +95,15 @@
         android:id="@+id/et_lg_password"
         android:layout_width="329dp"
         android:layout_height="56dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="@string/et_lg_ingrese_password"
         android:inputType="numberPassword"
-        android:maxLength="6"
+        android:maxLength="8"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.029"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_lg_usuario" />
 </android.support.constraint.ConstraintLayout>
