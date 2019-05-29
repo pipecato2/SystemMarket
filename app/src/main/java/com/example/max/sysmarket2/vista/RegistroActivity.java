@@ -13,7 +13,7 @@ import com.example.max.sysmarket2.modelo.Validadores;
  * El RegistroActivity, es una nueva vista la cual permitira realizar el registro de un usuario no registrado
  *
  * @author Maximiliano Pinto
- * @version 15-05-2019/v1.0
+ * @version 15-05-2019/v1.0 prueba
  */
 
 public class RegistroActivity extends AppCompatActivity {
