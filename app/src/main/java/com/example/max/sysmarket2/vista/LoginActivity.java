@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_lg_ingresar_A;
     Button btn_lg_registar_A;
     Button btn_lg_salir_A;
+    static Boolean bolValidador;
 
     String titulo = "Bienvenido";
 
@@ -78,8 +79,11 @@ public class LoginActivity extends AppCompatActivity {
         btn_lg_ingresar_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    getUsuario(v.getContext(),et_lg_usuario_A.getText().toString(),et_lg_password_A.getText().toString());
+                getUsuario(v.getContext(), et_lg_usuario_A.getText().toString(), et_lg_password_A.getText().toString());
+                if (bolValidador == false) {
+                    et_lg_password_A.setText("");
+                    et_lg_usuario_A.clearFocus();
+                }
             }
         });
 
@@ -109,7 +113,7 @@ public class LoginActivity extends AppCompatActivity {
 
      */
     public static void getUsuario(final Context contex, String usuario, String Clave){
-
+        bolValidador=false;
         String PLACES_URL = "http://fmorales-001-site2.btempurl.com/api/Usuario/"+usuario+"/"+Clave+"/ValidacionUsuario";
         final String LOG_TAG = "VolleyPlacesRemoteDS";
 
@@ -127,8 +131,6 @@ public class LoginActivity extends AppCompatActivity {
                     public void onResponse(JSONArray responsePlaces) {
                         UsuarioVO usu = new UsuarioVO();
                         if (responsePlaces.length() == 0) {
-                            et_lg_password_A.setText("");
-                            et_lg_usuario_A.clearFocus();
                             Toast.makeText(contex,contex.getString(R.string.msjContresanaIncorrecta), Toast.LENGTH_LONG).show();
                         } else {
                             for (int i = 0; i < responsePlaces.length(); i++) {
@@ -147,15 +149,23 @@ public class LoginActivity extends AppCompatActivity {
                                     if(usu.getEstado()==0){
                                         et_lg_password_A.setText("");
                                         et_lg_usuario_A.clearFocus();
+                                        bolValidador =false;
                                         Toast.makeText(contex,contex.getString(R.string.msjcuentaInactiva), Toast.LENGTH_LONG).show();
                                     }
+                                    else{
+                                        bolValidador =true;
+                                        Intent act = new Intent(contex, ComprasActivity.class);
+                                        contex.startActivity(act);
+                                    }
+
 
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
                             }
                         }
-                        Log.d(LOG_TAG,responsePlaces.toString());
+
+
                     }
                 }, new Response.ErrorListener() { //Listener ERROR
 
@@ -163,6 +173,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 //There was an error :(
                 Log.d(LOG_TAG,error.toString());
+
             }
         });
 
