@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         /**
          * Ingresar al sistema
          *
-         * Llama el procedimiento getUsuario ´´para validar usuario
+         * Llama el procedimiento setOnClickListener ejecuta el boton ingresar para validar usuario
          * @author Felipe Morales
          * @version 2019.05.28
          * @since 1.0
@@ -79,11 +79,31 @@ public class LoginActivity extends AppCompatActivity {
         btn_lg_ingresar_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getUsuario(v.getContext(), et_lg_usuario_A.getText().toString(), et_lg_password_A.getText().toString());
-                if (bolValidador == false) {
-                    et_lg_password_A.setText("");
-                    et_lg_usuario_A.clearFocus();
+                Boolean bolError=false;
+
+                if(et_lg_usuario_A.getText().toString().trim().equalsIgnoreCase(""))
+                {
+                    et_lg_usuario_A.setError(getString(R.string.msjErrorUsuario));
+                    bolError=true;
                 }
+                if(et_lg_password_A.getText().toString().trim().equalsIgnoreCase(""))
+                {
+                    et_lg_password_A.setError(getString(R.string.msjErrorContrasena));
+                    bolError=true;
+                }
+
+                if(bolError==false){
+                    getUsuario(v.getContext(), et_lg_usuario_A.getText().toString(), et_lg_password_A.getText().toString());
+                    if (bolValidador == false) {
+                        et_lg_password_A.setText("");
+                        et_lg_usuario_A.setText("");
+
+                    }
+                }
+                else{
+                    Toast.makeText(v.getContext(),getString(R.string.msjErrorLogin),Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

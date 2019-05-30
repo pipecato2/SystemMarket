@@ -43,4 +43,7 @@
     <string name="ingrese_email">Ingrese Email</string>
     <string name="recuperar_contrase_a">Recuperar contraseña</string>
     <string name="volver">Volver</string>
+    <string name="msjErrorUsuario">Falta ingresar el usuario</string>
+    <string name="msjErrorContrasena">Falta Ingresar la contraseña</string>
+    <string name="msjErrorLogin">Existen campos vacios, verificar</string>
 </resources>
