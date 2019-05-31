@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
      */
     static EditText et_lg_usuario_A;
     static EditText et_lg_password_A;
+    Button bt_Recuperar;
     Button btn_lg_ingresar_A;
     Button btn_lg_registar_A;
     Button btn_lg_salir_A;
@@ -66,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_lg_ingresar_A = (Button) findViewById(R.id.btn_lg_ingresar);
         btn_lg_registar_A = (Button) findViewById(R.id.btn_lg_registar);
         btn_lg_salir_A = (Button) findViewById(R.id.btn_lg_salir);
+        bt_Recuperar=(Button)findViewById(R.id.btRecuperar);
 
         /**
          * Ingresar al sistema
@@ -104,6 +106,14 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(v.getContext(),getString(R.string.msjErrorLogin),Toast.LENGTH_SHORT).show();
                 }
 
+            }
+        });
+
+        bt_Recuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginActivity.this, RecuperarActivity.class);
+                startActivity(i);
             }
         });
 

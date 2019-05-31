@@ -41,7 +41,7 @@
         android:textSize="17sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btRecuperar" />
 
     <Button
         android:id="@+id/btn_lg_registar"
@@ -58,10 +58,10 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_lg_ingresar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/btRecuperar" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btRecuperar"
         android:layout_width="282dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"

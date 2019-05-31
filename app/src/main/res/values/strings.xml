@@ -40,7 +40,7 @@
     <string name="btn_cc_vovler">Salir</string>
     <string name="msjContresanaIncorrecta">El usuario o contraseña no corresponde</string>
     <string name="msjcuentaInactiva">El usuario se encuentra su cuenta desahabilitada.</string>
-    <string name="ingrese_email">Ingrese Email</string>
+    <string name="ingrese_email">Ingrese Usuario</string>
     <string name="recuperar_contrase_a">Recuperar contraseña</string>
     <string name="volver">Volver</string>
     <string name="msjErrorUsuario">Falta ingresar el usuario</string>
