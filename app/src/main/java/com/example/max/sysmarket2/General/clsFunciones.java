@@ -4,26 +4,48 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.widget.Toast;
+
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 public class clsFunciones {
     public void sendEmail(Context context) {
-        Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
-        //Aqui definimos la tipologia de datos del contenido dle Email en este caso text/html
-        emailIntent.setType("text/html");
-        // Indicamos con un Array de tipo String las direcciones de correo a las cuales enviar
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"fmorales_arenas@hotmail.com"});
-        // Aqui definimos un titulo para el Email
-        emailIntent.putExtra(android.content.Intent.EXTRA_TITLE, "El Titulo");
-        // Aqui definimos un Asunto para el Email
-        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "El Asunto");
-        // Aqui obtenemos la referencia al texto y lo pasamos al Email Intent
-        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "pteua");
-        try {
-            //Enviamos el Correo iniciando una nueva Activity con el emailIntent.
-            context.startActivity(Intent.createChooser(emailIntent, "Enviar Correo..."));
-        } catch (android.content.ActivityNotFoundException ex) {
-            Toast.makeText(context, "No hay ningun cliente de correo instalado.", Toast.LENGTH_SHORT).show();
-        }
+
+        Properties props = new Properties();
+        props.put("mail.smtp.auth", "true");
+        props.put("mail.smtp.starttls.enable", "true");
+        props.put("mail.smtp.host", "smtp.gmail.com");
+        props.put("mail.smtp.port", "587");
+
+        Session session = Session.getInstance(props,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication("pipecato2", "beto1982");
+                    }
+                });
+            try {
+
+                Message message = new MimeMessage(session);
+                message.setFrom(new InternetAddress("pipecato2@gmail.com"));
+                message.setRecipients(Message.RecipientType.TO,
+                        InternetAddress.parse("fmorales_arenas@hotmail.com"));
+                message.setSubject("prueba");
+                message.setText("correp de cprueba");
+
+                Transport.send(message);
+
+            } catch (MessagingException e) {
+                Log.d("MailJob", e.getMessage());
+            }
+
     }
 }
