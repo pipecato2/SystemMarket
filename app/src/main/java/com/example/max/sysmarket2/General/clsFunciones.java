@@ -29,7 +29,7 @@ public class clsFunciones {
         Session session = Session.getInstance(props,
                 new javax.mail.Authenticator() {
                     protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication("pipecato2", "beto1982");
+                        return new PasswordAuthentication("systemmarket2", "taller2019");
                     }
                 });
             try {
