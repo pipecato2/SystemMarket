@@ -125,6 +125,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        btn_lg_salir_A.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_MAIN);  // con este código vamos a la Activity principal
+                finish(); // Sale de la aplicación
+            }
+        });
 
     }
 

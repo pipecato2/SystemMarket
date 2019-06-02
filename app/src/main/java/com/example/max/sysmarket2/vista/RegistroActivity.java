@@ -62,6 +62,9 @@ public class RegistroActivity extends AppCompatActivity {
         //        Intent AddPhrase = new Intent(getApplicationContext(), AddPhrase.class); //layout que quieras abrir
           //      startActivity(AddPhrase);
                 return true;
+            case "Volver":
+                finish();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

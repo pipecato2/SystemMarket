@@ -9,7 +9,7 @@
         android:title="@string/guardar"
         android:tooltipText="@string/ttlmensajeinformacion"
         app:showAsAction="always" />
-    <item android:title="Salir"
+    <item android:title="@string/volver"
         android:id="@+id/action_Cancelar"
         android:orderInCategory="103"
         android:tooltipText=""
