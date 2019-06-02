@@ -7,5 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="ActionBarLight" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:background">#FFEB3B</item>
+    </style>
 </resources>

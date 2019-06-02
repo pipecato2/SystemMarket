@@ -2,9 +2,14 @@ package com.example.max.sysmarket2.vista;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.max.sysmarket2.R;
 import com.example.max.sysmarket2.modelo.Validadores;
@@ -45,6 +50,24 @@ public class RegistroActivity extends AppCompatActivity {
     Button btn_rg_cancelar_A;
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getOrder()) {
+            case 102:
+                Toast.makeText(this,"ingrso",Toast.LENGTH_LONG).show();
+        //        Intent AddPhrase = new Intent(getApplicationContext(), AddPhrase.class); //layout que quieras abrir
+          //      startActivity(AddPhrase);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

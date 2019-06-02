@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title=""
+    <item
         android:id="@+id/action_Guardar"
-        android:orderInCategory="100"
+        android:icon="@android:drawable/ic_menu_add"
+        android:orderInCategory="102"
+        android:title="Guardar"
         android:tooltipText="Guardar la información"
-        android:icon="@android:drawable/ic_menu_add">
-
+        app:showAsAction="always" />
+    <item android:title="Salir"
+        android:id="@+id/action_Cancelar"
+        android:orderInCategory="103"
+        android:tooltipText=""
+        android:icon="@android:drawable/ic_menu_close_clear_cancel">
     </item>
 </menu>
