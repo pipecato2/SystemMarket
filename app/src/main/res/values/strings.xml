@@ -46,4 +46,6 @@
     <string name="msjErrorUsuario">Falta ingresar el usuario</string>
     <string name="msjErrorContrasena">Falta Ingresar la contraseña</string>
     <string name="msjErrorLogin">Existen campos vacios, verificar</string>
+    <string name="ttlmensajeinformacion">Guardar la información</string>
+    <string name="guardar">Guardar</string>
 </resources>

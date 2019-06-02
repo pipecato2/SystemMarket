@@ -56,8 +56,8 @@ public class RegistroActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getOrder()) {
-            case 102:
+        switch (item.getTitle().toString()) {
+            case "Guardar":
                 Toast.makeText(this,"ingrso",Toast.LENGTH_LONG).show();
         //        Intent AddPhrase = new Intent(getApplicationContext(), AddPhrase.class); //layout que quieras abrir
           //      startActivity(AddPhrase);
