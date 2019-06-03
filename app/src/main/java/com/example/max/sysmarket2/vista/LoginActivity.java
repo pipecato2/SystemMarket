@@ -99,7 +99,6 @@ public class LoginActivity extends AppCompatActivity {
                     if (bolValidador == false) {
                         et_lg_password_A.setText("");
                         et_lg_usuario_A.setText("");
-
                     }
                 }
                 else{

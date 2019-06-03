@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/action_Guardar"
-        android:icon="@android:drawable/ic_input_add"
+        android:icon="@android:drawable/ic_menu_save"
         android:orderInCategory="102"
         android:title="@string/guardar"
         android:tooltipText="@string/ttlmensajeinformacion"
