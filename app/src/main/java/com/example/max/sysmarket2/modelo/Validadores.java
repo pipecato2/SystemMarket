@@ -29,7 +29,7 @@ public class Validadores {
     public static String validaTexto(EditText et_entrada) {
 
 
-     // Se eliminan variables de prueba
+      //Holi
 
         String error = null;
         String texto = et_entrada.getText().toString();
