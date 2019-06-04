@@ -28,7 +28,7 @@ public class Validadores {
      */
     public static String validaTexto(EditText et_entrada) {
 
-        String pruebaGith="Esta es una prueba de gith";
+        String pruebaGith="prueba 2 commit";
 
         String error = null;
         String texto = et_entrada.getText().toString();
