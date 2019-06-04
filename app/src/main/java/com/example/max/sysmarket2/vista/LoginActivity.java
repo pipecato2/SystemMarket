@@ -1,5 +1,6 @@
 package com.example.max.sysmarket2.vista;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -24,7 +25,7 @@ import com.example.max.sysmarket2.R;
 import com.example.max.sysmarket2.modelo.Validadores;
 import com.example.max.sysmarket2.modelo.dao.UsuarioDAO;
 import com.example.max.sysmarket2.modelo.vo.UsuarioVO;
-
+import com.example.max.sysmarket2.General.clsFunciones;
 /**
  * En LoginActivity es MAIN, esto quiere decir cuando se abra la aplicacion, esta funcionara a partir del LoginActivity
  *
@@ -49,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_lg_registar_A;
     Button btn_lg_salir_A;
     static Boolean bolValidador;
+    static clsFunciones funciones = new clsFunciones();
+
 
     String titulo = "Bienvenido";
 
@@ -82,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Boolean bolError=false;
-
+                ProgressDialog progress= funciones.CargarDatos("Esperando",v.getContext());
                 if(et_lg_usuario_A.getText().toString().trim().equalsIgnoreCase(""))
                 {
                     et_lg_usuario_A.setError(getString(R.string.msjErrorUsuario));
@@ -95,13 +98,16 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 if(bolError==false){
+
                     getUsuario(v.getContext(), et_lg_usuario_A.getText().toString(), et_lg_password_A.getText().toString());
                     if (bolValidador == false) {
                         et_lg_password_A.setText("");
                         et_lg_usuario_A.setText("");
+                        progress.hide();
                     }
                 }
                 else{
+                    progress.hide();
                     Toast.makeText(v.getContext(),getString(R.string.msjErrorLogin),Toast.LENGTH_SHORT).show();
                 }
 

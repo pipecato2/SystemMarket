@@ -1,5 +1,6 @@
 package com.example.max.sysmarket2.General;
 
+import android.app.ProgressDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -47,5 +48,17 @@ public class clsFunciones {
                 Log.d("MailJob", e.getMessage());
             }
 
+    }
+
+    public  ProgressDialog CargarDatos(String cargar,Context context)
+    {
+        ProgressDialog progressDialog;
+        progressDialog=new ProgressDialog(context);
+        progressDialog.setMessage("" + cargar);
+        progressDialog.setCancelable(true);
+        progressDialog.setCanceledOnTouchOutside(true);
+        progressDialog.show();
+
+        return progressDialog;
     }
 }
