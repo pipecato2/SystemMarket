@@ -28,7 +28,7 @@ public class Validadores {
      */
     public static String validaTexto(EditText et_entrada) {
 
-        String pruebaGith="prueba 2 commit";
+
         String pruebaGith2="prueba 2 commit";
 
         String error = null;
