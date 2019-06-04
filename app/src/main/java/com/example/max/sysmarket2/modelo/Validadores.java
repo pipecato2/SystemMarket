@@ -28,6 +28,8 @@ public class Validadores {
      */
     public static String validaTexto(EditText et_entrada) {
 
+        String pruebaGith="Esta es una prueba de gith";
+
         String error = null;
         String texto = et_entrada.getText().toString();
         if (texto.isEmpty()) {
