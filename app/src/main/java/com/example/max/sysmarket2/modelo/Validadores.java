@@ -29,7 +29,7 @@ public class Validadores {
     public static String validaTexto(EditText et_entrada) {
 
 
-        String pruebaGith2="prueba 2 commit";
+     // Se eliminan variables de prueba
 
         String error = null;
         String texto = et_entrada.getText().toString();
