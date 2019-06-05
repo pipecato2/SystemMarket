@@ -53,6 +53,23 @@
                         "endColumns": "107,130,129,130,93,97,99,114,95,92,99,92,101,113,92,86,83,103,103,85,93",
                         "endOffsets": "2956,3087,3217,3348,3442,3540,3640,3755,3851,3944,4044,4137,4239,4353,4446,4533,4617,4721,4825,4911,5005"
                     }
+                },
+                {
+                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.5.0.aar\\d3ca886cd1232af143261b9a00ad55e4\\res\\values-sl\\values-sl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,114,165,318",
+                        "endColumns": "58,50,152,99",
+                        "endOffsets": "109,160,313,413"
+                    },
+                    "to": {
+                        "startLines": "52,53,54,55",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5194,5253,5304,5457",
+                        "endColumns": "58,50,152,99",
+                        "endOffsets": "5248,5299,5452,5552"
+                    }
                 }
             ]
         }

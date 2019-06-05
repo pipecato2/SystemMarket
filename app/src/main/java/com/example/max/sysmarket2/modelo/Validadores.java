@@ -29,8 +29,6 @@ public class Validadores {
     public static String validaTexto(EditText et_entrada) {
 
 
-      //Holi
-
         String error = null;
         String texto = et_entrada.getText().toString();
         if (texto.isEmpty()) {

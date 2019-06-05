@@ -4,6 +4,23 @@
             "outputFile": "C:\\Users\\Max\\Documents\\GitHub\\SystemMarket\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-uk\\values-uk.xml",
             "map": [
                 {
+                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.5.0.aar\\d3ca886cd1232af143261b9a00ad55e4\\res\\values-uk\\values-uk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,117,164,306",
+                        "endColumns": "61,46,141,121",
+                        "endOffsets": "112,159,301,423"
+                    },
+                    "to": {
+                        "startLines": "52,53,54,55",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5105,5167,5214,5356",
+                        "endColumns": "61,46,141,121",
+                        "endOffsets": "5162,5209,5351,5473"
+                    }
+                },
+                {
                     "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\8228530aaed6a30ca97c932f167abc15\\res\\values-uk\\values-uk.xml",
                     "from": {
                         "startLines": "2",

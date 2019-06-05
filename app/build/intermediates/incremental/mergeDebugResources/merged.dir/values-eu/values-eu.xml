@@ -50,4 +50,8 @@
     <string msgid="8236416097133080726" name="mr_user_route_category_name">"Gailuak"</string>
     <string msgid="146198913615257606" name="search_menu_title">"Bilatu"</string>
     <string msgid="7988687684186075107" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="zxing_app_name">Barra-kode Eskanerra</string>
+    <string name="zxing_button_ok">Ados</string>
+    <string name="zxing_msg_camera_framework_bug">Barkatu, Android kamerak arazo bat izan du. Behar bada gailua berrabiarazi beharko duzu.</string>
+    <string name="zxing_msg_default_status">Kokatu barra-kode bat laukizuzenaren barruan eskaneatzeko.</string>
 </resources>

@@ -53,6 +53,23 @@
                         "endColumns": "92,91,92,96,85,78,86,93,91,89,87,87,98,97,80,78,78,89,89,81,88",
                         "endOffsets": "2756,2848,2941,3038,3124,3203,3290,3384,3476,3566,3654,3742,3841,3939,4020,4099,4178,4268,4358,4440,4529"
                     }
+                },
+                {
+                    "source": "C:\\Users\\Max\\.gradle\\caches\\transforms-1\\files-1.1\\zxing-android-embedded-3.5.0.aar\\d3ca886cd1232af143261b9a00ad55e4\\res\\values-zh-rHK\\values-zh-rHK.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,104,151,244",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "99,146,239,309"
+                    },
+                    "to": {
+                        "startLines": "52,53,54,55",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "4713,4762,4809,4902",
+                        "endColumns": "48,46,92,69",
+                        "endOffsets": "4757,4804,4897,4967"
+                    }
                 }
             ]
         }
