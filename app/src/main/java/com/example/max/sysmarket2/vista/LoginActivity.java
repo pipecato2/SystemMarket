@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Boolean bolError=false;
-                ProgressDialog progress= funciones.CargarDatos("Esperando",v.getContext());
+
                 if(et_lg_usuario_A.getText().toString().trim().equalsIgnoreCase(""))
                 {
                     et_lg_usuario_A.setError(getString(R.string.msjErrorUsuario));
@@ -103,11 +103,9 @@ public class LoginActivity extends AppCompatActivity {
                     if (bolValidador == false) {
                         et_lg_password_A.setText("");
                         et_lg_usuario_A.setText("");
-                        progress.hide();
                     }
                 }
                 else{
-                    progress.hide();
                     Toast.makeText(v.getContext(),getString(R.string.msjErrorLogin),Toast.LENGTH_SHORT).show();
                 }
 
@@ -156,6 +154,8 @@ public class LoginActivity extends AppCompatActivity {
      */
     public static void getUsuario(final Context contex, String usuario, String Clave){
         bolValidador=false;
+        ProgressDialog progress= funciones.CargarDatos("Esperando",contex);
+        progress.show();
         String PLACES_URL = "http://fmorales-001-site2.btempurl.com/api/Usuario/"+usuario+"/"+Clave+"/ValidacionUsuario";
         final String LOG_TAG = "VolleyPlacesRemoteDS";
 
@@ -221,6 +221,7 @@ public class LoginActivity extends AppCompatActivity {
 
 //Send the request to the requestQueue
         requestQueue.add(request);
+        progress.hide();
     }
 
 
