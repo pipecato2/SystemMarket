@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_Guardar"
+        android:icon="@android:drawable/ic_menu_save"
+        android:orderInCategory="102"
+        android:title="@string/guardar"
+        android:tooltipText="@string/ttlmensajeinformacion"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_Sincronizar"
+        android:icon="@android:drawable/ic_menu_save"
+        android:orderInCategory="102"
+        android:title="@string/sincronizar"
+        android:tooltipText="@string/ttlmensajeinformacion" />
+    <item android:title="@string/volver"
+        android:id="@+id/action_Cancelar"
+        android:orderInCategory="103"
+        android:tooltipText=""
+        android:icon="@android:drawable/ic_menu_close_clear_cancel">
+    </item>
+</menu>
