@@ -40,6 +40,7 @@
         android:label="@string/SystemMarket"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity android:name="com.example.max.sysmarket2.vista.RecuperarActivity" />
         <activity android:name="com.example.max.sysmarket2.vista.LoginActivity" >

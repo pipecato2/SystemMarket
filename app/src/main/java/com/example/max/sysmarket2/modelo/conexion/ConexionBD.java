@@ -25,8 +25,8 @@ public class ConexionBD {
             conn = DriverManager.getConnection(
                     "jdbc:jtds:sqlserver:sql5003.site4now.net;" +
                             "databaseName=DB_A48BB3_Market;" +
-                            "user=DB_A48BB3_Market_admin;" +
-                            "password=Usuario1Prueba");
+                            "user=DB_A48BB3;" +
+                            "password=");
 
         }catch (Exception e){
             error = e.toString();

@@ -48,4 +48,5 @@
     <string name="msjErrorLogin">Existen campos vacios, verificar</string>
     <string name="ttlmensajeinformacion">Guardar la información</string>
     <string name="guardar">Guardar</string>
+    <string name="sincronizar">Sincronizar</string>
 </resources>

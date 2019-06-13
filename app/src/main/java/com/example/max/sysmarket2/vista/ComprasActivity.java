@@ -29,7 +29,7 @@ public class ComprasActivity extends AppCompatActivity {
         et_cc_producto  = (EditText) findViewById(R.id.et_cc_producto);
         img_btn_scan = (ImageButton) findViewById(R.id.img_btn_scan);
 
-
+        scanear();
     }
 
     public void scanear (){
